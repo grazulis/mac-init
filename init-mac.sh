@@ -70,7 +70,6 @@ CASKS=(
     iterm2
     r
     rstudio
-    skype
     slack
     vagrant
     virtualbox
@@ -81,14 +80,14 @@ CASKS=(
 echo "Installing cask apps..."
 brew install --cask ${CASKS[@]}
 
-echo "Installing fonts..."
-brew tap homebrew/cask-fonts
-FONTS=(
-    font-inconsolidata
-    font-roboto
-    font-clear-sans
-)
-brew install --cask ${FONTS[@]}
+#echo "Installing fonts..."
+#brew tap homebrew/cask-fonts
+#FONTS=(
+#    font-inconsolidata
+#    font-roboto
+#    font-clear-sans
+#)
+#brew install --cask ${FONTS[@]}
 
 echo "Installing Python packages..."
 PYTHON_PACKAGES=(
@@ -96,7 +95,7 @@ PYTHON_PACKAGES=(
     virtualenv
     virtualenvwrapper
 )
-sudo pip install ${PYTHON_PACKAGES[@]}
+sudo pip3 install ${PYTHON_PACKAGES[@]}
 
 echo "Installing global npm packages..."
 npm install marked -g
@@ -113,14 +112,7 @@ defaults write com.apple.screensaver askForPasswordDelay -int 0
 # Show filename extensions by default
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
-# Enable tap-to-click
-# defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true
-# defaults -currentHost write NSGlobalDomain com.apple.mouse.tapBehavior -int 1
-
-# Disable "natural" scroll
-# defaults write NSGlobalDomain com.apple.swipescrolldirection -bool false
-
-echo "Creating folder structure..."
+#echo "Creating folder structure..."
 # [[ ! -d Wiki ]] && mkdir Wiki
 # [[ ! -d Workspace ]] && mkdir Workspace
 
