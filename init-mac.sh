@@ -68,6 +68,7 @@ CASKS=(
     google-chrome
     google-backup-and-sync
     iterm2
+    keepassxc
     keka
     r
     rstudio
