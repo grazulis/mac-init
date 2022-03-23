@@ -66,7 +66,6 @@ CASKS=(
     dropbox
     firefox
     google-chrome
-    google-backup-and-sync
     iterm2
     keepassxc
     keka
